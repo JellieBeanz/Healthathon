@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Care From Far Dashboard</title>
+    <link rel="stylesheet" href="../sass/main.css" />
+    <link rel="stylesheet" href="../sass/custom.css" />
+  </head>
+  <body>
+    <div class="py-2 px-5">
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand text-white pl-3" href="/">
+          <img
+            src="../assets/logo.png"
+            width="240px"
+            class="d-inline-block align-top font-weight-bold"
+            alt="Logo"
+            loading="lazy"
+          />
+          &nbsp;
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-5 mt-3 mr-auto">
+            <li class="nav-item active px-2">
+              <a class="nav-link text-white font-weight-bold h5" href="/">
+                Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+          </ul>
+          <div class="mx-2">
+            <a
+              class="btn btn-success my-2 my-sm-0 mx-2 px-4 py-2"
+              type="submit"
+              href="IntroLogin.html"
+            >
+              Logout
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container py-5">
+        <h1>Please enter the details in this form  ...</h1>
+    </div>
+
+    <div class='px-5'>
+        <div class='container'>
+            <div class=''>
+              <div class='row'>
+                <div class='col-md-5 col-sm-12 text-white' >
+                    <div class='card bg-dark'>
+                        <div class='card-body'>
+                          <h4 class='card-title text-center'>Care Reciever Details</h4>
+                          <form id="form1">
+                            <div class='form-row'>
+                              <div class='form-group col-md-6 text-white'>
+                                <label for='inputFName'>First Name</label>
+                                <input type='text' class='form-control' id='inputFName4' placeholder="Jenima" />
+                              </div>
+                              <div class='form-group col-md-6 text-white '>
+                                <label for='inputLName'>Last Name</label>
+                                <input type='text' class='form-control' id='inputLName4' placeholder="Thomas"/>
+                              </div>
+                            </div>
+
+
+                            <div class='form-row'>
+                              <div class='form-group col-md-6 text-white '>
+                                <label for='inputDOB'>Date Of Birth</label>
+                                <input type='text' class='form-control' id='inputDOB' placeholder="01/01/1970"/>
+                              </div>
+                              <div class='form-group col-md-6 text-white '>
+                                <label for='inputGender'>Gender</label>
+                                <input type='text' class='form-control' id='inputGender' placeholder="Female"/>
+                              </div>
+
+                            </div>
+
+                            <div class='form-row'>
+                              <div class='form-group text-white'>
+                                <label for='inputStateID'>State ID</label>
+                                <input type='text' class='form-control' id='inputStateID' placeholder='xxxx-xxxx-xxxx-xxxx'/>
+                              </div>
+
+                              <div class='form-group text-white'>
+                                <label for='inputCountry'>Country</label>
+                                <input type='text' class='form-control' id='inputCountry' placeholder='India'/>
+                              </div>
+
+                            </div>
+
+
+
+                            <div class='form-group text-white'>
+                              <label for='inputAddress'>Address</label>
+                              <input type='text' class='form-control' id='inputAddress' placeholder='46,Nehru Nagar, Chromepet, Chennai, India'/>
+                            </div>
+
+                            <div class='form-group text-white'>
+                              <label for='inputEmail'>Email</label>
+                              <input type='text' class='form-control' id='inputEmail' placeholder='xxxx@yyyyyy.zzz'/>
+                            </div>
+
+                            <div class='form-group text-white'>
+                              <label for='inputPhone'>Phone</label>
+                              <input type='text' class='form-control' id='inputPhone' placeholder='+xxx xxxxx xxxxx'/>
+                            </div>
+
+                            <div class='form-group text-white'>
+                              <label for='inputNotes'>Phone</label>
+                              <input type='text' class='form-control' id='inputNotes' placeholder='Post COVID Discharge Followup'/>
+                            </div>
+
+                          </form>
+                        </div>
+                      </div>
+                </div>
+                <div class='col-md-3 col-sm-12 text-white'>
+                    <div>
+                        <div class='card bg-dark'>
+                            <div class='card-body'>
+                                <h4 class='card-title text-center'>Care Payer Details</h4>
+                                <form id="form2">
+
+                                    <div class="form-group text-white">
+                                        <label for="inputPayerName">Care Payer Name</label>
+                                        <input type="text" class="form-control" id="inputPayerName" placeholder="Sarah Thomas">
+                                    </div>
+
+                                    <div class='form-group text-white'>
+                                      <label for='inputPayerCountry'>Country</label>
+                                      <input type='text' class='form-control' id='inputPayerCountry' placeholder='USA'/>
+                                    </div>
+
+                                    <div class='form-group text-white'>
+                                      <label for='inputPayerEmail'>Email</label>
+                                      <input type='text' class='form-control' id='inputPayerEmail' placeholder='xxxx@yyyyyy.zzz'/>
+                                    </div>
+
+                                    <div class="form-group text-white">
+                                        <label for="inputPayerMobileNumber">Mobile Number</label>
+                                        <input type="text" class="form-control" id="inputPayerMobileNumber" placeholder="+xxx xxxxx xxxxx">
+                                    </div>
+
+                                    <div class='form-group text-white'>
+                                      <label for='inputPaymentMode'>Payment Mode (PayID - Crypto payments Accepted )</label>
+                                      <input type='text' class='form-control' id='inputPaymentMode' placeholder='PayID-Crypto'/>
+                                    </div>
+
+                                    <div class='form-group text-white'>
+                                      <label for='inputPayerPAYID'>Phone</label>
+                                      <input type='text' class='form-control' id='inputPayerPAYID' placeholder='alice$xpring.money'/>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='col-md-4 col-sm-12'>
+                    <div>
+                        <div class='card bg-dark text-white'>
+                            <div class='card-body'>
+                                <h4 class='card-title text-center'>Appointment Details</h4>
+
+                                <form id="form3">
+
+                                  <div class='form-row'>
+                                          <div class='form-group col-md-6 text-white '>
+                                            <label for='inputApptDate'>Date</label>
+                                            <input type='text' class='form-control' id='inputApptDate' placeholder="02/08/2020"/>
+                                          </div>
+
+                                          <div class='form-group col-md-6 text-white '>
+                                            <label for='inputApptTime'>Time</label>
+                                            <input type='text' class='form-control' id='inputApptDate' placeholder="13:30 EST"/>
+                                          </div>
+                                  </div>
+
+                                  <div class='form-group text-white '>
+                                  <label for="outputpayAmountKey">Alternate if primary country not available</label>
+                                 </div>
+
+
+                                  <div class='form-row'>
+                                    <div class='form-group col-md-6 text-white '>
+                                      <label for='inputDocLocationChoiceCountry'> Country</label>
+                                      <input type='text' class='form-control' id='inputDocLocationChoiceCountry' placeholder="India"/>
+                                    </div>
+
+                                    <div class='form-group col-md-6 text-white '>
+                                      <label for='inputDocLocationChoiceCity'> City</label>
+                                      <input type='text' class='form-control' id='inputDocLocationChoiceCity' placeholder="Chennai"/>
+                                    </div>
+                                  </div>
+
+                                    <div class="form-group">
+                                        <label for="outputpayAmountKey">Payment Amount</label>
+                                        <label for="ouputpayAmountValue">USD 49 </label>
+                                        <!--<input type="number" class="form-control" id="inputPayAmount" placeholder="49 USD" /> -->
+                                    </div>
+
+                                <!--
+                                    <div class="form-group col-md-6 text-white">
+                                        <label for="outputDocNameKey">Doctor Name and Specialty</label>
+                                        <label for="outputDocNameValue">Dr Elangovan,  Geriatics Care</label>
+                                    </div>
+
+                                    <div class="form-group col-md-6 text-white">
+                                          <label for="outputDocCountryCityKey">Doctor in Country - City</label>
+                                          <label for="outputDocCountryCityValue">India -  </label> <label for="inputpayCity">Chennai </label>
+                                    </div>
+                                  -->
+                                  <div class="form-group text-white">
+                                      <label for="outputPayRecipientKey">Doctor PayID</label>
+                                      <label for="outputPayReceipientValue">drCareFromFar$xprize.money</label>
+                                  </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <div class="container pb-5 pt-4 mb-5">
+        <div class="row">
+            <div class="col-md-7 col-sm-1">
+            </div>
+            <div class="col-md-2 col-sm-1">
+              <div class="pl-5">
+                <!-- <button class="btn btn-success btn-primary px-4 py-2 consentbtn" onclick="window.location.href = 'ConsenConfirmation.html';" id="submit">
+                  <span class="h4 text-light">
+                    Submit
+                  </span>
+                </button> -->
+              </div>
+            </div>
+            <div class="col-md-3 col-sm-10">
+
+
+                    <a class="btn btn-primary px-4 py-2 consentbtn" href="ApptConfirmation.html">
+                      <span class="h4 text-light" style="font-weight: 500;">
+                          Next
+                          <svg  width="20px" height="20px" class="consentbtnicon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                      </span>
+                    </a>
+                </div>
+
+
+        </div>
+    </div>
+
+
+    <footer class='p-5 footer'>
+        <div class='container'>
+          <div class='row'>
+            <div class='col-12 col-md-4'>
+              <div class='pr-lg-5'>
+                <h1 class='heading h6 text-uppercase font-weight-700 mb-3'>
+
+                  <strong>Care From Far</strong>
+                </h1>
+              </div>
+            </div>
+
+          <hr />
+          <div class='d-flex align-items-center'>
+            <span class>
+              © 2020
+              <a href='/' class='footer-link' target='_blank'>
+                Care From Far
+              </a>
+              . All rights reserved.
+            </span>
+            <ul class='nav ml-lg-auto'>
+              <li class='nav-item'>
+                <a class='nav-link' href='https://github.com/'>
+                  <i class='fab fa-github' />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      document.getElementById( 'submit' ).addEventListener( 'click', function () {
+          // check for and report errors here
+          for( var index = 0; index < document.forms.length; index++ ) {
+              document.forms[index].submit();
+          };
+      } );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.navbar-brand {
+  font-weight: 500;
+}
+.size {
+  width: 90%;
+  height: auto;
+}
+.consentbtn {
+  border-radius: 50px;
+  align-items: center;
+}
