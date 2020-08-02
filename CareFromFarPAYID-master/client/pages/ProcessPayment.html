@@ -79,7 +79,7 @@
                                 <div class="pb-2">
                                     <span class="h5">
                                         <strong class="h4"> Source - CarePayer PAY ID:</strong>
-                                        &nbsp;&nbsp;alice$xpring.money
+                                        &nbsp;&nbsp;sarah$127.0.0.1
                                         <br>
                                     </span>
                                 </div>
@@ -88,7 +88,7 @@
                                 <div class="pb-2">
                                     <span class="h5">
                                         <strong class="h4">Destination - Doctor PAY ID:</strong>
-                                        &nbsp;&nbsp;drCareFromFar$xprize.money
+                                        &nbsp;&nbsp;drCareFromFar$127.0.0.1
                                         <br>
                                     </span>
                                 </div>
@@ -107,12 +107,141 @@
         <div class="row pt-4">
             <div class="col-4"></div>
             <div class=" col-4 pl-5">
+
+              <!--
                 <a class="btn btn-primary px-4 py-2 consentbtn" href="ProcessPayment.html">
                   <span class="h4 text-light" style="font-weight: 500;">
                       PAY with PAYID
                       <svg  width="20px" height="20px" class="consentbtnicon" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                   </span>
                 </a>
+
+              -->
+
+
+
+              <script src="../../node_modules/axios/dist/axios.min.js"></script>
+              <script>
+
+              function validatePAYIDs(sourcePayID,amount,destinationPayID)
+              {
+
+  alert('PAY IDs input 1 '+ ' source ' + sourcePayID + ' amount '+ amount +' destinationPayID '+ destinationPayID);
+
+                  var  prefix = 'http://127.0.0.1:8080/';
+
+                  var  valSourceUrl = prefix+sourcePayID.substring(0,sourcePayID.indexOf("$"));
+                  var  valDestinationUrl = prefix+destinationPayID.substring(0,destinationPayID.indexOf("$"));
+
+
+                  validatePAYIDFunction(valSourceUrl);
+                  validatePAYIDFunction(valDestinationUrl);
+
+                  sendPaymentRequest(valSourceUrl, amount, valDestinationUrl);
+
+                  //alert('PAY IDs for validation 2 '+ ' source ' + valSourceUrl + ' amount '+ amount +' destinationP'+ valDestinationUrl);
+
+              }
+
+function sendPaymentRequest(valSourceUrl, amount, valDestinationUrl){
+
+              alert('sending PaymentRequest to Xumm');
+
+                                //var axios = require('axios');
+
+                                var data = JSON.stringify({"txjson":{"TransactionType":"Payment","Destination":"rPdvC6ccq8hCdPKSPJkPmyZ4Mi1oG2FFkT","Fee":"12"}});
+
+                                var config = {
+                                  method: 'post',
+                                  url: 'https://xumm.app/api/v1/platform/ping',
+                                  headers: {
+                                    'authorization': 'bearer',
+                                    'Content-Type': 'application/json',
+                                    'x-api-key': 'be8e531b-ed9c-4bf5-ac85-44c70a675318',
+                                    'x-api-secret': '808b6035-1cdc-4402-8638-c42a0c019633',
+                                    'Cookie': '__cfduid=d31d28cf255476c83341e2f79ca7df97c1596404342'
+                                  },
+                                  data : data
+                                };
+
+                                axios(config)
+                                .then(function (response) {
+                                  console.log(JSON.stringify(response.data));
+                                })
+                                .catch(function (error) {
+                                  console.log(error);
+                                });
+
+              alert('Response received from Xumm ....');
+
+}
+
+              function validatePAYIDFunction(payIDUrl, amount)
+              {
+
+                  alert('validate payID  '+ payIDUrl);
+
+                            var config = {
+                              method: 'get',
+                              url: payIDUrl,
+                              headers: {
+                                'PayID-Version': '1.0',
+                                'Accept': 'application/xrpl-testnet+json'
+                              }
+                            };
+
+                            axios(config)
+                            .then(function (response) {
+                              console.log(JSON.stringify(response.data));
+                            })
+                            .catch(function (error) {
+                              console.log(error);
+                            });
+
+
+              }
+
+
+              function validateFunction(sourcePayID,amount,destinationPayID)
+              {
+
+
+                alert('Validating PAYIDs '+ ' source ' + sourcePayID + ' amount '+ amount +' destinationPayID '+ destinationPayID);
+
+
+                validatePAYIDs(sourcePayID,amount,destinationPayID);
+
+                  //var axios = require('axios');
+                    /*
+                            var config = {
+                              method: 'get',
+                              url: 'http://127.0.0.1:8080/alice',
+                              headers: {
+                                'PayID-Version': '1.0',
+                                'Accept': 'application/xrpl-testnet+json'
+                              }
+                            };
+
+                            axios(config)
+                            .then(function (response) {
+                              console.log(JSON.stringify(response.data));
+                            })
+                            .catch(function (error) {
+                              console.log(error);
+                            });
+                    */
+              }
+
+            </script>
+
+            <button class="btn btn-primary px-4 py-2 consentbtn" onclick="validateFunction('sarah$127.0.0.1','100','drCareFromFar$127.0.0.1')">
+              <span class="h4 text-light" style="font-weight: 500;">
+                  PAY with PAYID
+                  <svg  width="20px" height="20px" class="consentbtnicon" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+              </span>
+            </button>
+
             </div>
             <div class="col-4"></div>
         </div>
@@ -129,8 +258,6 @@
                 </h1>
               </div>
             </div>
-
-
 
 
           <hr />
